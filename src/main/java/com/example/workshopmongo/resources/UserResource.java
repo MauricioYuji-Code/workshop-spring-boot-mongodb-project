@@ -52,5 +52,13 @@ public class UserResource {
 
 		return ResponseEntity.created(uri).build();// created -> retorna o codigo de resposta 201
 	}
+	
+	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE) 
+	public ResponseEntity<Void> delete(@PathVariable String id) {
+
+		userService.delete(id);
+
+		return ResponseEntity.noContent().build(); //nocontent 204 sem retornar nada 
+	}
 
 }
