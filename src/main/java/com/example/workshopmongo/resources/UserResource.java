@@ -50,7 +50,7 @@ public class UserResource {
 
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId()).toUri();
 
-		return ResponseEntity.created(uri).build();// created -> retorna o codigo de resposta 201
+		return ResponseEntity.created(uri).build();// created -> retorna o codigo de resposta 201!!!
 	}
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE) 
